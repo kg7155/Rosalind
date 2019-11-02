@@ -60,7 +60,6 @@ def traceback():
     
     while True:
         dir = directions[i][j]
-        print(dir)
         if (dir == 0):
             s_o.insert(0, s[i])
             t_o.insert(0, '-')
