@@ -32,3 +32,4 @@ for row in range(n):
     for col in range(n):
         solution.write(str(dist_mat[row][col]) + ' ')
     solution.write('\n')
+solution.close()
