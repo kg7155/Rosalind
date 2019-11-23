@@ -6,16 +6,15 @@ from Bio.Alphabet import generic_dna
 
 def construct_cyclic_chromosome(edges):
     cc = ""
-    count = len(edges)
-    key, cons = next(iter(edges.items()))
-    cons = edges[cons]
+    num_edges = len(edges)
+    _, to = next(iter(edges.items()))
+    to = edges[to]
     i = 0
-    while i < count:
-        cc += cons[-1]
-        cons = edges[cons]
+    while i < num_edges:
+        cc += to[-1]
+        to = edges[to]
         i += 1
     return cc
-
 #--------------------------------------------------------------------------
 # construct an adjacency list corresponding to the de Bruijn graph
 
